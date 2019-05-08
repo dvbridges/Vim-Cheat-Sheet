@@ -1,12 +1,14 @@
 # Vim Cheat Sheet
 
+## Main
  Shortcut      | Description                      
 ---------------|----------------------------------
-## Main
 Escape |Exit command mode
 i|"Insert mode" - insert text
 :|"Last-line mode" where Vim expects a command
 ## Nav keys
+ Shortcut      | Description                      
+---------------|----------------------------------
 h, j, k, l|Left, down, up, right
 0|Move cursor to beginning of line
 $|Move cursor to EOL
@@ -17,20 +19,28 @@ b|Move back one word
 G|Move to end of file
 gg|Move to beginning of file
 ## Navigating docs
+ Shortcut      | Description                      
+---------------|----------------------------------
 (|Previous sentence
 )|Next sentence
 {|Previous paragraph
 }|Next paragraph
 ## Insert text
+ Shortcut      | Description                      
+---------------|----------------------------------
 a|Insert after cursor
 A|Insert at EOL
 i|Insert before cursor
 o|Begin new line below cursor
 O|Begin new line above cursor
 ## Special inserts
+ Shortcut      | Description                      
+---------------|----------------------------------
 :r <filename>|Insert filename below cursor
 :r !<command>|Execute command and insert below cursor
 ## Delete text
+ Shortcut      | Description                      
+---------------|----------------------------------
 x|Delete char at cursor
 dw|Delete word
 d3w|Delete 3 words
@@ -42,9 +52,13 @@ dG|Delete to EOF
 dd|Delete line
 3dd|Delete 3 lines
 ## Replace text
+ Shortcut      | Description                      
+---------------|----------------------------------
 r|Replace char at cursor
 R|Replace chars - can also delete and undo
 ## Copy and paste
+ Shortcut      | Description                      
+---------------|----------------------------------
 v|Select characters
 V|Select line
 y|Yank or copy
@@ -53,6 +67,8 @@ yy|Copy line
 p|Paste after line
 P|Paste before line
 ## Search and replace
+ Shortcut      | Description                      
+---------------|----------------------------------
 /search_term|Find going forward
 ?search_term|Find going backward
 n|Next search item
@@ -61,12 +77,18 @@ N|Previous search item
 :s/orig/replacement/g|Search and replace all occurances
 :s/orig/replacement/gc|Search and replace all occurances with confirmation
 ## Modify text
+ Shortcut      | Description                      
+---------------|----------------------------------
 ~|Switch case
 d|Delete word
 ## Commenting multiple lines
+ Shortcut      | Description                      
+---------------|----------------------------------
 V|Select lines
 :s/^/# /|Substitute the beginning of line with hashtag
 ## Save and Quit
+ Shortcut      | Description                      
+---------------|----------------------------------
 :q| Quit Vim - fails when file changed
 :q!| Quit without saving
 :w|Save file
