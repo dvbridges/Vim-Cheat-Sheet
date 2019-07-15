@@ -38,6 +38,7 @@ au BufNewFile,BufRead *.py
 
 au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
+    \ set expandtab |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
