@@ -28,8 +28,8 @@ gg|Move to beginning of file
 ## Insert text
  Shortcut      | Description                      
 ---------------|----------------------------------
-a|Insert after cursor
-A|Insert at EOL
+a|Insert (append) after cursor
+A|Insert (append) at EOL
 i|Insert before cursor
 o|Begin new line below cursor
 O|Begin new line above cursor
@@ -47,10 +47,14 @@ d3w|Delete 3 words
 d0|Delete to line begin
 d$|Delete to EOL
 d)|Delete to end of sentence
+2dj|Delete 2 lines down (j is down)
 dgg|Delete to beginning of file
 dG|Delete to EOF
 dd|Delete line
 3dd|Delete 3 lines
+C|Delete from cursor to end of line, and enter insert mode
+D|Delete from cursor to end of line
+3D|Delete 3 lines, but from cursor position
 ## Replace text
  Shortcut      | Description                      
 ---------------|----------------------------------
@@ -61,9 +65,11 @@ R|Replace chars - can also delete and undo
 ---------------|----------------------------------
 v|Select characters
 V|Select line
+CTRL+v|Select block in line with cursor/selection 
 y|Yank or copy
 d|Cut
 yy|Copy line
+3Y|Copy 3 lines below cursor
 p|Paste after line
 P|Paste before line
 ## Search and replace
@@ -74,8 +80,9 @@ P|Paste before line
 n|Next search item
 N|Previous search item
 :s/orig/replacement|Search and replace
-:s/orig/replacement/g|Search and replace all occurances
+:s/orig/replacement/g|Search and replace all occurances in selection
 :s/orig/replacement/gc|Search and replace all occurances with confirmation
+:%s/orig.replacement/g|Search and replace all occurances in whole document
 ## Modify text
  Shortcut      | Description                      
 ---------------|----------------------------------
@@ -96,5 +103,7 @@ V|Select lines
 :wq| save and quit
 ZZ| Write file if change, and quit
 ZQ| See :q!
-
-
+## Misc
+ Shortcut      | Description                      
+---------------|----------------------------------
+.|Repeat any command
