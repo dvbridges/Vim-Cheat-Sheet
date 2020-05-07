@@ -1,6 +1,14 @@
 set nocompatible              " required
 filetype off                  " required
 
+" Set line numbers
+set number
+
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -27,7 +35,7 @@ set foldlevel=99
 Plugin 'tmhedberg/SimpylFold'
 
 " Add proper PEP8 indentation
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead *.py,*go
     \ set tabstop=4 |
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
@@ -36,9 +44,8 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix |
 
-au BufNewFile,BufRead *.js,*.html,*.css
+au BufNewFile,BufRead *.js,*.html,*.css,*.rb,*.erb,*.md,*.sh,
     \ set tabstop=2 |
-    \ set expandtab |
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
 
@@ -46,9 +53,9 @@ au BufNewFile,BufRead *.js,*.html,*.css
 set encoding=utf-8
 
 " Add python autocomplete
-Bundle 'Valloric/YouCompleteMe'
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"Bundle 'Valloric/YouCompleteMe'
+"let g:ycm_autoclose_preview_window_after_completion=1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Color schemes 
 Plugin 'jnurmine/Zenburn'
@@ -59,8 +66,10 @@ Plugin 'leafgarland/badwolf'
 if has('gui_running')
   set background=dark
   colorscheme solarized
-"else
-"  colorscheme badwolf
+else
+  "colorscheme badwolf
+  "colorscheme zenburn 
+  colorscheme vividchalk 
 endif
 
 " File browsing
@@ -71,3 +80,12 @@ Plugin 'jistr/vim-nerdtree-tabs'
 
 " Add POWERLINE
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Highlight whitespace
+highlight TabSpaces ctermbg=130 guibg=#af5f00
+match TabSpaces /\s\+$/
+
+"set list
+"set listchars=trail:-
+
+
