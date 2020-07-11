@@ -25,7 +25,6 @@ Plugin 'gmarik/Vundle.vim'
 " ...
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Enable folding
@@ -58,19 +57,11 @@ set encoding=utf-8
 "map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Color schemes 
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-vividchalk'
-Plugin 'leafgarland/badwolf'
-
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  "colorscheme badwolf
-  "colorscheme zenburn 
-  colorscheme vividchalk 
-endif
+"Plugin 'jnurmine/Zenburn'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'vim-vividchalk'
+"Plugin 'leafgarland/badwolf'
+Plugin 'flazz/vim-colorschemes'
 
 " File browsing
 Plugin 'scrooloose/nerdtree'
@@ -80,6 +71,21 @@ Plugin 'jistr/vim-nerdtree-tabs'
 
 " Add POWERLINE
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Run once to install plugins
+" :PluginInstall 
+
+call vundle#end()            " required
+
+" Set color scheme
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme badwolf
+  "colorscheme zenburn 
+  "colorscheme vividchalk 
+endif
 
 " Highlight whitespace
 highlight TabSpaces ctermbg=130 guibg=#af5f00
