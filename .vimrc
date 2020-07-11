@@ -56,10 +56,6 @@ set encoding=utf-8
 "map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Color schemes 
-"Plugin 'jnurmine/Zenburn'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'vim-vividchalk'
-"Plugin 'leafgarland/badwolf'
 Plugin 'flazz/vim-colorschemes'
 
 " File browsing
@@ -71,15 +67,23 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " Add POWERLINE
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" Powerline setup
+set laststatus=2
+set term=xterm-256color
+set termencoding=utf-8
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
+" set guifont=Ubuntu\ Mono
+let g:Powerline_symbols = 'fancy'
+
 " Run once to install plugins
-" :PluginInstall 
+":PluginInstall
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
 " Set color scheme
+set background=dark
 if has('gui_running')
-  set background=dark
   colorscheme solarized
 else
   colorscheme badwolf
